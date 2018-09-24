@@ -18,9 +18,6 @@ def encrypt_caesar (plaintext):
             ciphertext = ciphertext + plaintext[i]
     return ciphertext
 
-otvet = encrypt_caesar(st)
-print(otvet)
-
 def decrypt_caesar (ciphertext):
     plaintext = ''
     for i in range(len(ciphertext)):
@@ -37,6 +34,3 @@ def decrypt_caesar (ciphertext):
         else:
             plaintext = plaintext + otvet[i]
     return plaintext
-
-otvet2 = decrypt_caesar(otvet)
-print(otvet2)
