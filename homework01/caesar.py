@@ -1,15 +1,24 @@
-st = input()
-k = 3
-
-def encrypt_caesar (plaintext):
+def encrypt_caesar(plaintext):
+    """
+    Encrypts plaintext using a Caesar cipher.
+    >>> encrypt_caesar("PYTHON")
+    'SBWKRQ'
+    >>> encrypt_caesar("python")
+    'sbwkrq'
+    >>> encrypt_caesar("Python3.6")
+    'Sbwkrq3.6'
+    >>> encrypt_caesar("")
+    ''
+    """
+    k = 3
     ciphertext = ''
     for i in range(len(plaintext)):
-        if (ord(plaintext[i]) >= ord('a')) and (ord(plaintext[i]) <= ord('z')):
+        if 'a' <= plaintext[i] <= 'z':
             if ord(plaintext[i]) + k > ord('z'):
                 ciphertext = ciphertext + chr(ord(plaintext[i]) + k - 26)
             else:
                 ciphertext = ciphertext + chr(ord(plaintext[i]) + k)
-        elif (ord(plaintext[i]) >= ord('A')) and (ord(plaintext[i]) <= ord('Z')):
+        elif 'A' <= plaintext[i] <= 'Z':
             if ord(plaintext[i]) + k > ord('Z'):
                 ciphertext = ciphertext + chr(ord(plaintext[i]) + k - 26)
             else:
@@ -18,19 +27,32 @@ def encrypt_caesar (plaintext):
             ciphertext = ciphertext + plaintext[i]
     return ciphertext
 
-def decrypt_caesar (ciphertext):
+
+def decrypt_caesar(ciphertext):
+    """
+    Decrypts a ciphertext using a Caesar cipher.
+    >>> decrypt_caesar("SBWKRQ")
+    'PYTHON'
+    >>> decrypt_caesar("sbwkrq")
+    'python'
+    >>> decrypt_caesar("Sbwkrq3.6")
+    'Python3.6'
+    >>> decrypt_caesar("")
+    ''
+    """
+    k = 3
     plaintext = ''
     for i in range(len(ciphertext)):
-        if (ord(ciphertext[i]) >= ord('a')) and (ord(ciphertext[i]) <= ord('z')):
+        if 'a' <= ciphertext[i] <= 'z':
             if ord(ciphertext[i]) - k < ord('a'):
                 plaintext = plaintext + chr(ord(ciphertext[i]) - k + 26)
             else:
                 plaintext = plaintext + chr(ord(ciphertext[i]) - k)
-        elif (ord(ciphertext[i]) >= ord('A')) and (ord(ciphertext[i]) <= ord('Z')):
+        elif 'A' <= ciphertext[i] <= 'Z':
             if ord(ciphertext[i]) - k < ord('A'):
                 plaintext = plaintext + chr(ord(ciphertext[i]) - k + 26)
             else:
-                plaintext = plaintext + chr(ord(otvet[i]) - k)
+                plaintext = plaintext + chr(ord(ciphertext[i]) - k)
         else:
-            plaintext = plaintext + otvet[i]
+            plaintext = plaintext + ciphertext[i]
     return plaintext
