@@ -1,5 +1,6 @@
 import random
 
+
 def is_prime(n):
     """
     Tests to see if a number is prime.
@@ -29,7 +30,7 @@ def gcd(a, b):
     >>> gcd(3, 7)
     1
     """
-    while a!= b:
+    while a != b:
         if a > b:
             a = a % b
         elif a < b:
@@ -68,6 +69,7 @@ def multiplicative_inverse(e, phi):
     d = list[0][5] % phi
     return d
 
+
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
         raise ValueError('Both numbers must be prime.')
@@ -94,6 +96,7 @@ def generate_keypair(p, q):
     # Return public and private keypair
     # Public key is (e, n) and private key is (d, n)
     return ((e, n), (d, n))
+
 
 def encrypt(pk, plaintext):
     # Unpack the key into it's components
