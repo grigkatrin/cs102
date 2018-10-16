@@ -13,18 +13,19 @@ def encrypt_caesar(plaintext):
     k = 3
     ciphertext = ''
     for i in range(len(plaintext)):
-        if 'a' <= plaintext[i] <= 'z':
-            if ord(plaintext[i]) + k > ord('z'):
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + k - 26)
+        if ('a' <= plaintext[i] <= 'z') or ('A' <= plaintext[i] <= 'Z'):
+            if plaintext[i].isupper():
+                if ord(plaintext[i].lower()) + k > ord('z'):
+                    ciphertext += chr(ord(plaintext[i].lower()) + k - 26).upper()
+                else:
+                    ciphertext += chr(ord(plaintext[i].lower()) + k).upper()
             else:
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + k)
-        elif 'A' <= plaintext[i] <= 'Z':
-            if ord(plaintext[i]) + k > ord('Z'):
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + k - 26)
-            else:
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + k)
+                if ord(plaintext[i]) + k > ord('z'):
+                    ciphertext += chr(ord(plaintext[i]) + k - 26)
+                else:
+                    ciphertext += chr(ord(plaintext[i]) + k)
         else:
-            ciphertext = ciphertext + plaintext[i]
+            ciphertext += plaintext[i]
     return ciphertext
 
 
@@ -43,16 +44,17 @@ def decrypt_caesar(ciphertext):
     k = 3
     plaintext = ''
     for i in range(len(ciphertext)):
-        if 'a' <= ciphertext[i] <= 'z':
-            if ord(ciphertext[i]) - k < ord('a'):
-                plaintext = plaintext + chr(ord(ciphertext[i]) - k + 26)
+        if ('a' <= ciphertext[i] <= 'z') or ('A' <= ciphertext[i] <= 'Z'):
+            if ciphertext[i].isupper():
+                if ord(ciphertext[i].lower()) - k < ord('a'):
+                    plaintext += chr(ord(ciphertext[i].lower()) - k + 26).upper()
+                else:
+                    plaintext += chr(ord(ciphertext[i].lower()) - k).upper()
             else:
-                plaintext = plaintext + chr(ord(ciphertext[i]) - k)
-        elif 'A' <= ciphertext[i] <= 'Z':
-            if ord(ciphertext[i]) - k < ord('A'):
-                plaintext = plaintext + chr(ord(ciphertext[i]) - k + 26)
-            else:
-                plaintext = plaintext + chr(ord(ciphertext[i]) - k)
+                if ord(ciphertext[i]) - k < ord('a'):
+                    plaintext += chr(ord(ciphertext[i]) - k + 26)
+                else:
+                    plaintext += chr(ord(ciphertext[i]) - k)
         else:
-            plaintext = plaintext + ciphertext[i]
+            plaintext += ciphertext[i]
     return plaintext

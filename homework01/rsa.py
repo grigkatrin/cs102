@@ -16,10 +16,10 @@ def is_prime(n):
         if n % (i+1) == 0:
             k += 1
     if (k == 2)or(n == 1):
-        bool = True
+        prost = True
     else:
-        bool = False
-    return bool
+        prost = False
+    return prost
 
 
 def gcd(a, b):
@@ -30,12 +30,12 @@ def gcd(a, b):
     >>> gcd(3, 7)
     1
     """
-    while a != b:
+    while (a != 0) and (b != 0):
         if a > b:
             a = a % b
         elif a < b:
             b = b % a
-    return a
+    return a + b
 
 
 def multiplicative_inverse(e, phi):
@@ -48,25 +48,25 @@ def multiplicative_inverse(e, phi):
     A = phi
     B = e
     k = 0
-    list = [[A, B, A % B, A // B]]
+    table = [[A, B, A % B, A // B]]
     while A % B != 0:
         k += 1
         C = A % B
         A = B
         B = C
-        list.append([A, B, A % B, A // B])
+        table.append([A, B, A % B, A // B])
 
     x = 0
     y = 1
     for i in range(k + 1):
-        list[k - i].append(x)
-        list[k - i].append(y)
+        table[k - i].append(x)
+        table[k - i].append(y)
         x0 = x
         y0 = y
         x = y0
-        y = x0 - y0 * (int(list[k - i - 1][3]))
+        y = x0 - y0 * (int(table[k - i - 1][3]))
 
-    d = list[0][5] % phi
+    d = table[0][5] % phi
     return d
 
 

@@ -11,20 +11,23 @@ def encrypt_vigenere(plaintext, keyword):
     ciphertext = ''
     j = 0
     for i in range(len(plaintext)):
-        if 'a' <= plaintext[i] <= 'z':
-            t = (ord(keyword[j]) - ord('a')) % 26
-            if ord(plaintext[i]) + t > ord('z'):
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + t - 26)
+        if ('a' <= plaintext[i] <= 'z') or ('A' <= plaintext[i] <= 'Z'):
+            if keyword[j].isupper():
+                t = (ord(keyword[j].lower()) - ord('a')) % 26
             else:
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + t)
-        elif 'A' <= plaintext[i] <= 'Z':
-            t = (ord(keyword[j]) - ord('A')) % 26
-            if ord(plaintext[i]) + t > ord('Z'):
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + t - 26)
+                t = (ord(keyword[j]) - ord('a')) % 26
+            if plaintext[i].isupper():
+                if ord(plaintext[i].lower()) + t > ord('z'):
+                    ciphertext += chr(ord(plaintext[i].lower()) + t - 26).upper()
+                else:
+                    ciphertext += chr(ord(plaintext[i].lower()) + t).upper()
             else:
-                ciphertext = ciphertext + chr(ord(plaintext[i]) + t)
+                if ord(plaintext[i]) + t > ord('z'):
+                    ciphertext += chr(ord(plaintext[i]) + t - 26)
+                else:
+                    ciphertext += chr(ord(plaintext[i]) + t)
         else:
-            ciphertext = ciphertext + plaintext[i]
+            ciphertext += plaintext[i]
         if j >= (len(keyword) - 1):
             j = 0
         else:
@@ -45,20 +48,24 @@ def decrypt_vigenere(ciphertext, keyword):
     plaintext = ''
     j = 0
     for i in range(len(ciphertext)):
-        if 'a' <= ciphertext[i] <= 'z':
-            t = (ord(keyword[j]) - ord('a')) % 26
-            if ord(ciphertext[i]) - t < ord('a'):
-                plaintext = plaintext + chr(ord(ciphertext[i]) - t + 26)
+        if ('a' <= ciphertext[i] <= 'z') or ('A' <= ciphertext[i] <= 'Z'):
+            if keyword[j].isupper():
+                t = (ord(keyword[j].lower()) - ord('a')) % 26
             else:
-                plaintext = plaintext + chr(ord(ciphertext[i]) - t)
-        elif 'A' <= ciphertext[i] <= 'Z':
-            t = (ord(keyword[j]) - ord('A')) % 26
-            if ord(ciphertext[i]) - t < ord('A'):
-                plaintext = plaintext + chr(ord(ciphertext[i]) - t + 26)
+                t = (ord(keyword[j]) - ord('a')) % 26
+            if ciphertext[i].isupper():
+                if ord(ciphertext[i].lower()) - t < ord('a'):
+                    plaintext += chr(ord(ciphertext[i].lower()) - t + 26).upper()
+                else:
+                    plaintext += chr(ord(ciphertext[i].lower()) - t).upper()
             else:
-                plaintext = plaintext + chr(ord(ciphertext[i]) - t)
+                if ord(ciphertext[i]) - t < ord('a'):
+                    plaintext += chr(ord(ciphertext[i]) - t + 26)
+                else:
+                    plaintext += chr(ord(ciphertext[i]) - t)
+
         else:
-            plaintext = plaintext + ciphertext[i]
+            plaintext += ciphertext[i]
         if j >= (len(keyword) - 1):
             j = 0
         else:
