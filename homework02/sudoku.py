@@ -1,3 +1,9 @@
+import random
+import time
+import threading
+import multiprocessing
+
+
 def read_sudoku(filename):
     """ Прочитать Судоку из указанного файла """
     digits = [c for c in open(filename).read() if c in '123456789.']
@@ -59,8 +65,7 @@ def get_col(values, pos):
     >>> get_col([['1', '2', '3'], ['4', '5', '6'], ['.', '8', '9']], (0, 2))
     ['3', '6', '9']
     """
-    
-    pass
+    return [values[i][pos[1]] for i in range(len(values))]
 
 
 def get_block(values, pos):
@@ -73,7 +78,10 @@ def get_block(values, pos):
     >>> get_block(grid, (8, 8))
     ['2', '8', '.', '.', '.', '5', '.', '7', '9']
     """
-    pass
+    block = []
+    for i in range(9):
+        block.append(values[(pos[0]//3)*3 + (i // 3)][(pos[1]//3)*3 + (i % 3)])
+    return block
 
 
 def find_empty_positions(grid):
@@ -85,7 +93,12 @@ def find_empty_positions(grid):
     >>> find_empty_positions([['1', '2', '3'], ['4', '5', '6'], ['.', '8', '9']])
     (2, 0)
     """
-    pass
+    pos = None
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j] == '.':
+                pos = (i, j)
+    return pos
 
 
 def find_possible_values(grid, pos):
@@ -98,7 +111,22 @@ def find_possible_values(grid, pos):
     >>> values == {'2', '5', '9'}
     True
     """
-    pass
+    variants = {'1', '2', '3', '4', '5', '6', '7', '8', '9'}
+    row = get_row(grid, pos)
+    for i in row:
+        if i != '.':
+            variants.discard(i)
+
+    col = get_col(grid, pos)
+    for i in col:
+        if i != '.':
+            variants.discard(i)
+
+    block = get_block(grid, pos)
+    for i in block:
+        if i != '.':
+            variants.discard(i)
+    return variants
 
 
 def solve(grid):
@@ -113,13 +141,34 @@ def solve(grid):
     >>> solve(grid)
     [['5', '3', '4', '6', '7', '8', '9', '1', '2'], ['6', '7', '2', '1', '9', '5', '3', '4', '8'], ['1', '9', '8', '3', '4', '2', '5', '6', '7'], ['8', '5', '9', '7', '6', '1', '4', '2', '3'], ['4', '2', '6', '8', '5', '3', '7', '9', '1'], ['7', '1', '3', '9', '2', '4', '8', '5', '6'], ['9', '6', '1', '5', '3', '7', '2', '8', '4'], ['2', '8', '7', '4', '1', '9', '6', '3', '5'], ['3', '4', '5', '2', '8', '6', '1', '7', '9']]
     """
-    pass
+    pos = find_empty_positions(grid)
+    if pos is None:
+        return grid
+    variants = find_possible_values(grid, pos)
+    for i in variants:
+        grid[pos[0]][pos[1]] = i
+        sudoku = solve(grid)
+        if sudoku:
+            return sudoku
+    grid[pos[0]][pos[1]] = '.'
+    return None
 
 
 def check_solution(solution):
     """ Если решение solution верно, то вернуть True, в противном случае False """
     # TODO: Add doctests with bad puzzles
-    pass
+    check = True
+    for i in range(9):
+        pos = (i, 0)
+        if len(set(get_row(solution, pos))) != 9:
+            check = False
+        pos = (0, i)
+        if len(set(get_col(solution, pos))) != 9:
+            check = False
+        pos = ((i % 3)*3, (i // 3)*3)
+        if len(set(get_block(solution, pos))) != 9:
+            check = False
+    return check
 
 
 def generate_sudoku(N):
@@ -143,7 +192,25 @@ def generate_sudoku(N):
     >>> check_solution(solution)
     True
     """
-    pass
+    number = 0
+    grid = [['.', '.', '.', '.', '.', '.', '.', '.', '.'] for _ in range(9)]
+    while number < N:
+        pos = (random.randint(0, 8), random.randint(0, 8))
+        if grid[pos[0]][pos[1]] == '.':
+            options = find_possible_values(grid, pos)
+            t = str(random.randint(0, 9))
+            if t in options:
+                grid[pos[0]][pos[1]] = t
+                number += 1
+    return grid
+
+
+def run_solve(fname):
+    grid = read_sudoku(fname)
+    start = time.time()
+    solve(grid)
+    end = time.time()
+    print(f'{fname}: {end-start}')
 
 
 if __name__ == '__main__':
@@ -152,3 +219,35 @@ if __name__ == '__main__':
         display(grid)
         solution = solve(grid)
         display(solution)
+        print(check_solution(solution))
+
+
+if __name__ == '__main__':
+    for fname in ('puzzle1.txt', 'puzzle2.txt', 'puzzle3.txt'):
+        grid = read_sudoku(fname)
+        start = time.time()
+        solve(grid)
+        end = time.time()
+        print(f'{fname}: {end-start}')
+
+
+if __name__ == "__main__":
+    for fname in ('puzzle1.txt', 'puzzle2.txt', 'puzzle3.txt'):
+        t = threading.Thread(target=run_solve, args=(fname,))
+        t.start()
+
+
+if __name__ == "__main__":
+    for fname in ('puzzle1.txt', 'puzzle2.txt', 'puzzle3.txt'):
+        p = multiprocessing.Process(target=run_solve, args=(fname,))
+        p.start()
+
+
+if __name__ == "__main__":
+    N = 5
+    for _ in range(N):
+        t = threading.Thread(target=run_solve, args=('puzzle2.txt',))
+        t.start()
+    for _ in range(N):
+        p = multiprocessing.Process(target=run_solve, args=('puzzle2.txt',))
+        p.start()
