@@ -39,8 +39,7 @@ class GameOfLife:
         self.screen.fill(pygame.Color('white'))
 
         # Создание списка клеток
-        # PUT YOUR CODE HERE
-        self.clist = self.cell_list(randomize = True)
+        self.clist = self.cell_list(randomize=True)
 
         running = True
         while running:
@@ -51,7 +50,6 @@ class GameOfLife:
 
             # Отрисовка списка клеток
             # Выполнение одного шага игры (обновление состояния ячеек)
-            # PUT YOUR CODE HERE
             self.draw_cell_list(self.clist)
             self.clist = self.update_cell_list(self.clist)
 
@@ -67,8 +65,13 @@ class GameOfLife:
         """
         self.clist = []
         if randomize:
-            for row in range(self.cell_width):
-                self.clist.append([random.randint(0, 1) for col in range(self.cell_height)])
+            for i in range(self.cell_width):
+                row = [random.randint(0, 1) for col in range(self.cell_height)]
+                self.clist.append(row)
+        else:
+            for i in range(self.cell_width):
+                row = [0 for col in range(self.cell_height)]
+                self.clist.append(row)
         return self.clist
 
     def draw_cell_list(self, clist):
@@ -79,12 +82,13 @@ class GameOfLife:
         y = 0
         for row in clist:
             for col in row:
+                rect = (x, y, self.cell_size, self.cell_size)
                 if col == 1:
-                    pygame.draw.rect(self.screen, pygame.Color('green'), (x, y, self.cell_size, self.cell_size))
-                    x += self.cell_size
-                if col == 0:
-                    pygame.draw.rect(self.screen, pygame.Color('white'), (x, y, self.cell_size, self.cell_size))
-                    x += self.cell_size
+                    cell_color = pygame.Color('green')
+                else:
+                    cell_color = pygame.Color('white')
+                pygame.draw.rect(self.screen, cell_color, rect)
+                x += self.cell_size
         x = 0
         y += self.cell_size
         pass
@@ -123,9 +127,9 @@ class GameOfLife:
                 for i in neighbours:
                     if i == 1:
                         sum += 1
-                if cell_list == 0 and sum == 3:
+                if cell_list[row][col] == 0 and sum == 3:
                     new_clist[row].append(1)
-                elif cell_list == 1 and (sum == 2 or sum == 3):
+                elif cell_list[row][col] == 1 and (sum == 2 or sum == 3):
                     new_clist[row].append(1)
                 else:
                     new_clist[row].append(0)
