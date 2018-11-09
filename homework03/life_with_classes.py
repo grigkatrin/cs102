@@ -51,7 +51,7 @@ class GameOfLife:
 
             # Отрисовка списка клеток
             # Выполнение одного шага игры (обновление состояния ячеек)
-            # PUT YOUR CODE HERE
+            self.clist = self.clist.update()
 
             pygame.display.flip()
             clock.tick(self.speed)
@@ -126,7 +126,6 @@ class CellList:
                     self.clist[row][col] = Cell(row, col, True)
                 else:
                     self.clist[row][col] = Cell(row, col, False)
-        # PUT YOUR CODE HERE
         return self
 
     def __iter__(self):
