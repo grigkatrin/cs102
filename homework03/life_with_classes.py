@@ -145,7 +145,16 @@ class CellList:
             raise StopIteration
 
     def __str__(self):
-        pass
+        s = '[['
+        for row in range (self.nrows):
+            for col in range(self.ncols):
+                s += str(int(self.clist[row][col].is_alive()))
+                if col != self.ncols - 1:
+                    s += ', '
+            if row !=self.nrows - 1:
+                s += '], ['
+        s += ']]'
+        return s
 
     @classmethod
     def from_file(cls, filename):
