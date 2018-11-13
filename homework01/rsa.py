@@ -69,16 +69,7 @@ def multiplicative_inverse(e, phi):
     d = table[0][5] % phi
     return d
 
-p = 23
-q = 79
-e = 1505
-n = p * q
-phi = (p-1) * (q-1)
-d = multiplicative_inverse(e, phi)
-print(n,' ',d)
 
-
-'''
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
         raise ValueError('Both numbers must be prime.')
@@ -140,4 +131,3 @@ if __name__ == '__main__':
     print("Decrypting message with public key ", public, " . . .")
     print("Your message is:")
     print(decrypt(public, encrypted_msg))
-'''

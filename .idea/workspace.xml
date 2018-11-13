@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c95fdc88-b95d-4393-896f-f1a33a076aa9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework01/rsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework01/rsa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework03/life.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework03/life.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework03/life_with_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework03/life_with_classes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,13 +19,13 @@
     <SUITE FILE_PATH="coverage/Python$Doctests_in_rsa.coverage" NAME="Doctests in rsa Coverage Results" MODIFIED="1541003053101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
     <SUITE FILE_PATH="coverage/Python$Doctests_in_vigener.coverage" NAME="Doctests in vigener Coverage Results" MODIFIED="1539722234990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
     <SUITE FILE_PATH="coverage/Python$Doctests_in_sudoku.coverage" NAME="Doctests in sudoku Coverage Results" MODIFIED="1541003043902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework02" />
-    <SUITE FILE_PATH="coverage/Python$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1541958400137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework03" />
+    <SUITE FILE_PATH="coverage/Python$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1542116933092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework03" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="299040957">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="39" />
+          <entry key="project.closed" value="43" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="5" />
@@ -31,19 +34,19 @@
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.5" value="7" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="9" />
           <entry key="project.open.time.8" value="8" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="39" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="pstat" value="2" />
           <entry key="puzzle1" value="1" />
-          <entry key="py" value="43" />
+          <entry key="py" value="45" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -51,19 +54,19 @@
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="Profiler Session" value="2" />
-          <entry key="Python" value="43" />
+          <entry key="Python" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="24" />
-          <entry key="py" value="11161" />
+          <entry key="py" value="11264" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="24" />
-          <entry key="Python" value="11161" />
+          <entry key="Python" value="11264" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -75,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework03/life.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="78" column="80" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
+            <state relative-caret-position="-780">
+              <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -87,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework03/life_with_classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="215">
+              <caret line="106" column="35" lean-forward="true" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -99,10 +102,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework03/test_life_with_classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="15">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework01/rsa.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,14 +162,14 @@
         <option value="$PROJECT_DIR$/homework02/11.py" />
         <option value="$PROJECT_DIR$/homework02/sudoku.py" />
         <option value="$PROJECT_DIR$/homework03/__init__.py" />
-        <option value="$PROJECT_DIR$/homework01/rsa.py" />
         <option value="$PROJECT_DIR$/homework03/test_life.py" />
         <option value="$PROJECT_DIR$/homework03/steps.txt" />
         <option value="$PROJECT_DIR$/homework03/grid.txt" />
         <option value="$PROJECT_DIR$/homework03/1.py" />
-        <option value="$PROJECT_DIR$/homework03/life.py" />
         <option value="$PROJECT_DIR$/homework03/test_life_with_classes.py" />
         <option value="$PROJECT_DIR$/1.py" />
+        <option value="$PROJECT_DIR$/homework01/rsa.py" />
+        <option value="$PROJECT_DIR$/homework03/life.py" />
         <option value="$PROJECT_DIR$/homework03/life_with_classes.py" />
       </list>
     </option>
@@ -184,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,7 +235,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,13 +455,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="820" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36480686" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39055794" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.62225276" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26648352" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -493,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework01/rsa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework03/test_life.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-737">
@@ -528,9 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework03/steps.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -538,10 +553,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework01/rsa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/homework03/life.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="78" column="80" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
+        <state relative-caret-position="-780">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -550,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework03/life_with_classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="215">
+          <caret line="106" column="35" lean-forward="true" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -560,8 +592,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework03/test_life_with_classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="15">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

@@ -100,11 +100,11 @@ class CellList:
         rows = [row - 1, row, row + 1]
         cols = [col - 1, col, col + 1]
         for row1 in rows:
-            if 0 <= row1 < self.nrows:
+            if 0 <= row1 < len(self.clist):
                 for col1 in cols:
                     if col1 == col and row1 == row:
                         continue
-                    if 0 <= col1 < self.ncols:
+                    if 0 <= col1 < len(self.clist[0]):
                         if self.clist[row1][col1].is_alive():
                             neighbours.append(Cell(row1, col1, True))
                         else:

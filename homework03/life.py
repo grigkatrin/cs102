@@ -103,11 +103,11 @@ class GameOfLife:
         rows = [row - 1, row, row + 1]
         cols = [col - 1, col, col + 1]
         for row1 in rows:
-            if 0 <= row1 < self.cell_height:
+            if 0 <= row1 < len(self.clist):
                 for col1 in cols:
                     if col1 == col and row1 == row:
                         continue
-                    if 0 <= col1 < self.cell_width:
+                    if 0 <= col1 < len(self.clist[0]):
                         neighbours.append(self.clist[row1][col1])
         return neighbours
 
@@ -135,3 +135,7 @@ class GameOfLife:
                     new_clist[row].append(0)
         self.clist = new_clist
         return self.clist
+
+if __name__ == '__main__':
+    game = GameOfLife(320, 240, 20)
+    game.run()
