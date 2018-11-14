@@ -88,9 +88,9 @@ class GameOfLife:
                 else:
                     cell_color = pygame.Color('white')
                 pygame.draw.rect(self.screen, cell_color, rect)
-                x += self.cell_size
-        x = 0
-        y += self.cell_size
+                y += self.cell_size
+            y = 0
+            x += self.cell_size
         pass
 
     def get_neighbours(self, cell):

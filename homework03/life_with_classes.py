@@ -12,6 +12,7 @@ class GameOfLife:
         self.cell_size = cell_size
 
         # Устанавливаем размер окна
+
         self.screen_size = width, height
         # Создание нового окна
         self.screen = pygame.display.set_mode(self.screen_size)
@@ -32,6 +33,19 @@ class GameOfLife:
             pygame.draw.line(self.screen, pygame.Color('black'),
                              (0, y), (self.width, y))
 
+    def draw_cell_list(self, clist):
+        """ Отображение списка клеток
+        :param rects: Список клеток для отрисовки, представленный в виде матрицы
+        """
+        for cell in clist:
+            rect = (cell.col * self.cell_size, cell.row * self.cell_size, self.cell_size, self.cell_size)
+            if cell.is_alive() == 1:
+                cell_color = pygame.Color('green')
+            else:
+                cell_color = pygame.Color('white')
+            pygame.draw.rect(self.screen, cell_color, rect)
+        pass
+
     def run(self):
         """ Запустить игру """
         pygame.init()
@@ -51,6 +65,7 @@ class GameOfLife:
 
             # Отрисовка списка клеток
             # Выполнение одного шага игры (обновление состояния ячеек)
+            self.draw_cell_list(self.clist)
             self.clist = self.clist.update()
 
             pygame.display.flip()
@@ -178,3 +193,7 @@ class CellList:
             c_col += 1
         nrow = c_row + 1
         return CellList(nrow, ncol, file_clist=clist, is_file=True)
+
+if __name__ == '__main__':
+    game = GameOfLife(320, 240, 20)
+    game.run()
