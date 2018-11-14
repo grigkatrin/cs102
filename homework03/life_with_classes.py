@@ -6,13 +6,13 @@ from copy import deepcopy
 
 class GameOfLife:
 
-    def __init__(self, width=640, height=480, cell_size=10, speed=10):
+    def __init__(self, width: int=640, height: int=480,
+                 cell_size: int=10, speed: int=10) -> None:
         self.width = width
         self.height = height
         self.cell_size = cell_size
 
         # Устанавливаем размер окна
-
         self.screen_size = width, height
         # Создание нового окна
         self.screen = pygame.display.set_mode(self.screen_size)
@@ -24,7 +24,7 @@ class GameOfLife:
         # Скорость протекания игры
         self.speed = speed
 
-    def draw_grid(self):
+    def draw_grid(self) -> None:
         """ Отрисовать сетку """
         for x in range(0, self.width, self.cell_size):
             pygame.draw.line(self.screen, pygame.Color('black'),
@@ -33,7 +33,7 @@ class GameOfLife:
             pygame.draw.line(self.screen, pygame.Color('black'),
                              (0, y), (self.width, y))
 
-    def draw_cell_list(self, clist):
+    def draw_cell_list(self, clist) -> None:
         """ Отображение списка клеток
         :param rects: Список клеток для отрисовки,
         представленный в виде матрицы
@@ -41,7 +41,7 @@ class GameOfLife:
         for cell in clist:
             x = cell.col * self.cell_size
             y = cell.row * self.cell_size
-            rect = (x, y, self.cell_size, self.cell_size)
+            rect = (x + 1, y + 1, self.cell_size - 1, self.cell_size - 1)
             if cell.is_alive() == 1:
                 cell_color = pygame.Color('green')
             else:
@@ -49,7 +49,7 @@ class GameOfLife:
             pygame.draw.rect(self.screen, cell_color, rect)
         pass
 
-    def run(self):
+    def run(self) -> None:
         """ Запустить игру """
         pygame.init()
         clock = pygame.time.Clock()
@@ -57,7 +57,7 @@ class GameOfLife:
         self.screen.fill(pygame.Color('white'))
 
         # Создание списка клеток
-        self.clist = CellList(self.cell_height, self.cell_width, randomize=True)
+        self.clist = CellList(self.cell_height, self.cell_width, True)
 
         running = True
         while running:
@@ -78,20 +78,18 @@ class GameOfLife:
 
 class Cell:
 
-    def __init__(self, row, col, state=False):
+    def __init__(self, row: int, col: int, state: bool=False) -> None:
         self.row = row
         self.col = col
         self.state = state
-        pass
 
-    def is_alive(self):
-        if self.state:
-            return True
-        return False
+    def is_alive(self)-> bool:
+        return self.state
 
 
 class CellList:
-    def __init__(self, nrows, ncols, randomize=False, is_file=False, file_clist=[]):
+    def __init__(self, nrows: int, ncols: int, randomize: bool=False,
+                 is_file: bool=False, file_clist: list=[]) -> None:
         self.nrows = nrows
         self.ncols = ncols
         self.randomize = randomize
@@ -101,7 +99,7 @@ class CellList:
             for i in range(self.nrows):
                 self.clist.append([])
                 for j in range(self.ncols):
-                    self.clist[i].append(Cell(i, j, random.randint(0, 1)))
+                    self.clist[i].append(Cell(i, j, bool(random.randint(0, 1))))
         else:
             for i in range(self.nrows):
                 self.clist.append([])
@@ -111,7 +109,7 @@ class CellList:
         if is_file:
             self.clist = file_clist
 
-    def get_neighbours(self, cell):
+    def get_neighbours(self, cell: Cell) -> list:
         neighbours = []
         row = cell.row
         col = cell.col
@@ -133,14 +131,16 @@ class CellList:
         new_clist = deepcopy(self)
         for row in range(self.nrows):
             for col in range(self.ncols):
-                neighbours = new_clist.get_neighbours(new_clist.clist[row][col])
+                neighbours = new_clist.get_neighbours(
+                    new_clist.clist[row][col])
                 sum = 0
                 for i in neighbours:
                     if i.is_alive() == 1:
                         sum += 1
                 if new_clist.clist[row][col].is_alive() == 0 and sum == 3:
                     self.clist[row][col] = Cell(row, col, True)
-                elif new_clist.clist[row][col].is_alive() == 1 and (sum == 2 or sum == 3):
+                elif new_clist.clist[row][col].is_alive() == 1 and (
+                        sum == 2 or sum == 3):
                     self.clist[row][col] = Cell(row, col, True)
                 else:
                     self.clist[row][col] = Cell(row, col, False)
