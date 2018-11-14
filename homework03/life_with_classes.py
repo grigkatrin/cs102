@@ -177,11 +177,18 @@ class CellList:
     @classmethod
     def from_file(cls, filename):
         new_grid = []
-        with open(filename) as file:
-            for nrow, line in enumerate(file):
-                row = [Cell(nrow, ncol, int(state))
-                       for ncol, state in enumerate(line) if state in "01"]
-                new_grid.append(row)
+        with open(filename) as f:
+            line = f.readline()
+            row = 0
+            while line:
+                new_grid.append([])
+                col = 0
+                for pos in line:
+                    if pos in '01':
+                        new_grid[row].append(Cell(row, col, bool(int(pos))))
+                        col += 1
+                line = f.readline()
+                row += 1
         clist = cls(len(new_grid), len(new_grid[0]))
         clist.clist = new_grid
         return clist
