@@ -35,10 +35,13 @@ class GameOfLife:
 
     def draw_cell_list(self, clist):
         """ Отображение списка клеток
-        :param rects: Список клеток для отрисовки, представленный в виде матрицы
+        :param rects: Список клеток для отрисовки,
+        представленный в виде матрицы
         """
         for cell in clist:
-            rect = (cell.col * self.cell_size, cell.row * self.cell_size, self.cell_size, self.cell_size)
+            x = cell.col * self.cell_size
+            y = cell.row * self.cell_size
+            rect = (x, y, self.cell_size, self.cell_size)
             if cell.is_alive() == 1:
                 cell_color = pygame.Color('green')
             else:
@@ -161,12 +164,12 @@ class CellList:
 
     def __str__(self):
         s = '[['
-        for row in range (self.nrows):
+        for row in range(self.nrows):
             for col in range(self.ncols):
                 s += str(int(self.clist[row][col].is_alive()))
                 if col != self.ncols - 1:
                     s += ', '
-            if row !=self.nrows - 1:
+            if row != self.nrows - 1:
                 s += '], ['
         s += ']]'
         return s
