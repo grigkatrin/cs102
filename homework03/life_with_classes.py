@@ -176,26 +176,15 @@ class CellList:
 
     @classmethod
     def from_file(cls, filename):
-        grid = [c for c in open(filename).read()]
-        clist = [[]]
-        c_row = 0
-        c_col = 0
-        ncol = 0
-        nrow = 0
-        for i in grid:
-            if i == '\n':
-                clist.append([])
-                c_row += 1
-                ncol = c_col
-                c_col = 0
-                continue
-            if i == '1':
-                clist[c_row].append(Cell(c_row, c_col, True))
-            if i == '0':
-                clist[c_row].append(Cell(c_row, c_col, False))
-            c_col += 1
-        nrow = c_row + 1
-        return CellList(nrow, ncol, file_clist=clist, is_file=True)
+        new_grid = []
+        with open(filename) as file:
+            for nrow, line in enumerate(file):
+                row = [Cell(nrow, ncol, int(state))
+                       for ncol, state in enumerate(line) if state in "01"]
+                new_grid.append(row)
+        clist = cls(len(new_grid), len(new_grid[0]))
+        clist.clist = new_grid
+        return clist
 
 if __name__ == '__main__':
     game = GameOfLife(320, 240, 20)
