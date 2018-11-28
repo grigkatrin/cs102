@@ -48,7 +48,9 @@ def get_friends(user_id, fields):
     query = "{domain}/friends.get?access_token={access_token}&user_id={user_id}&fields={fields}&v={version}".format(
         **query_params)
     response = get(query, query_params)
-
+    err = response.json().get('error')
+    if err:
+        raise Exception(response.json()['error']['error_msg'])
     return response.json()['response']['items']
 
 
@@ -101,3 +103,6 @@ def messages_get_history(user_id, offset=0, count=200):
             t = 0
 
     return history
+
+if __name__ == '__main__':
+    print(get_friends(4871626, 'bdate'))

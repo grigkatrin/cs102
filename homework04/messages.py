@@ -1,6 +1,5 @@
 from collections import Counter
 import datetime
-import time
 import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
@@ -9,7 +8,6 @@ from typing import List, Tuple
 from api import messages_get_history
 from api_models import Message
 import config
-
 
 Dates = List[datetime.date]
 Frequencies = List[int]
