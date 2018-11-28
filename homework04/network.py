@@ -1,4 +1,4 @@
-import jgraph
+import igraph
 from api import get_friends
 import time
 
@@ -53,4 +53,4 @@ def plot_graph(user_id):
 
 
 if __name__ == '__main__':
-    plot_graph(52918220)
+    plot_graph(1253731)

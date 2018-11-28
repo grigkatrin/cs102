@@ -50,7 +50,7 @@ def get_friends(user_id, fields):
     response = get(query, query_params)
     err = response.json().get('error')
     if err:
-        raise Exception(response.json()['error']['error_msg'])
+        return []
     return response.json()['response']['items']
 
 
