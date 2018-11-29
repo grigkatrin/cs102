@@ -1,8 +1,8 @@
-import igraph
 from api import get_friends
 import time
-
-
+from igraph import Graph, plot
+import numpy as np
+ 
 def get_network(users_ids, as_edgelist=True):
     t = 0
     users_ids = get_friends(users_ids, 'bdate')
@@ -32,7 +32,7 @@ def plot_graph(user_id):
     edges = get_network(user_id)
     vertices = [(i['first_name']+' '+i['last_name']) for i in friends]
 
-    graf = jgraph.Graph(vertex_attrs={"label": vertices}, edges=edges, directed=False)
+    graf = igraph.Graph(vertex_attrs={"label": vertices}, edges=edges, directed=False)
 
     N = len(vertices)
     visual_style = {}
@@ -41,14 +41,14 @@ def plot_graph(user_id):
         area=N ** 3,
         repulserad=N ** 3)
 
-    jgraph.plot(graf, **visual_style)
+    igraph.plot(graf, **visual_style)
     graf.simplify(multiple=True, loops=True)
 
     communities = graf.community_edge_betweenness(directed=False)
     clusters = communities.as_clustering()
     print(clusters)
 
-    pal = jgraph.drawing.colors.ClusterColoringPalette(len(clusters))
+    pal = igraph.drawing.colors.ClusterColoringPalette(len(clusters))
     graf.vs['color'] = pal.get_many(clusters.membership)
 
 

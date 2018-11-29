@@ -30,8 +30,10 @@ def get(url, params={}, timeout=5, max_retries=5, backoff_factor=0.3):
 
 def get_friends(user_id, fields):
     """ Вернуть данных о друзьях пользователя
-    :param user_id: идентификатор пользователя, список друзей которого нужно получить
-    :param fields: список полей, которые нужно получить для каждого пользователя
+    :param user_id: идентификатор пользователя,
+    список друзей которого нужно получить
+    :param fields: список полей,
+    которые нужно получить для каждого пользователя
     """
     assert isinstance(user_id, int), "user_id must be positive integer"
     assert isinstance(fields, str), "fields must be string"
@@ -45,7 +47,8 @@ def get_friends(user_id, fields):
         'version': version
     }
 
-    query = "{domain}/friends.get?access_token={access_token}&user_id={user_id}&fields={fields}&v={version}".format(
+    query = "{domain}/friends.get?access_token={" \
+            "access_token}&user_id={user_id}&fields={fields}&v={version}".format(
         **query_params)
     response = get(query, query_params)
     err = response.json().get('error')
@@ -78,7 +81,8 @@ def messages_get_history(user_id, offset=0, count=200):
 
     start = time.time()
     t = 1
-    query = "{domain}/messages.getHistory?access_token={access_token}&user_id={user_id}&fields={fields}&v={version}".format(
+    query = "{domain}/messages.getHistory?access_token={" \
+            "access_token}&user_id={user_id}&fields={fields}&v={version}".format(
         **query_params)
     messages = get(query)
     count = messages.json()['response']['count']
@@ -86,7 +90,8 @@ def messages_get_history(user_id, offset=0, count=200):
 
     while count > 0:
         t += 1
-        query = "{domain}/messages.getHistory?access_token={access_token}&user_id={user_id}&offset={offset}&count={count}&v={version}".format(
+        query = "{domain}/messages.getHistory?access_token={" \
+                "access_token}&user_id={user_id}&offset={offset}&count={count}&v={version}".format(
             **query_params)
         new = get(query)
         new_history = new.json()['response']['items']
