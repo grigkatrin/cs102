@@ -37,7 +37,7 @@ def plot_graph(user_id):
 
     N = len(vertices)
     visual_style = {}
-    visual_style["layout"] = g.layout_fruchterman_reingold(
+    visual_style["layout"] = graf.layout_fruchterman_reingold(
         maxiter=1000,
         area=N ** 3,
         repulserad=N ** 3)
