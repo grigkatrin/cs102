@@ -6,15 +6,15 @@ import numpy as np
  
 def get_network(users_ids, as_edgelist=True):
     t = 0
-    users_ids = get_friends(users_ids, 'bdate')
+    friend_list = get_friends(users_ids, 'bdate')
     edges = []
-    matrix = [[0] * len(users_ids)] * len(users_ids)
+    matrix = [[0] * len(friend_list)] * len(friend_list)
 
-    for user_1 in range(len(users_ids)):
-        friends = get_friends(users_ids[user_1]['id'], 'bdate')
+    for user_1 in range(len(friend_list)):
+        friends = get_friends(friend_list[user_1]['id'], 'bdate')
         t += 1
-        for user_2 in range(user_1 + 1, len(users_ids)):
-            if users_ids[user_2] in friends:
+        for user_2 in range(user_1 + 1, len(friend_list)):
+            if friend_list[user_2] in friends:
                 matrix[user_2][user_1] = 1
                 matrix[user_1][user_2] = 1
                 if as_edgelist:
