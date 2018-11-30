@@ -29,28 +29,28 @@ def get_network(users_ids, as_edgelist=True):
 
 
 def plot_graph(user_id):
-    friends = get_friends(user_id, 'bdate')
-    edges = get_network(user_id)
-    vertices = [(i['first_name']+' '+i['last_name']) for i in friends]
+    surnames = get_friends(user_id, 'last_name')
+    vertices = [i['last_name'] for i in surnames]
+    edges = get_network(user_id, True)
 
-    graf = Graph(vertex_attrs={"label": vertices}, edges=edges, directed=False)
+    draf = igraph.Graph(vertex_attrs={"shape": "circle", "label": vertices, "size": 10},
+                     edges=edges, directed=False)
 
-    N = len(vertices)
-    visual_style = {}
-    visual_style["layout"] = graf.layout_fruchterman_reingold(
-        maxiter=1000,
-        area=N ** 3,
-        repulserad=N ** 3)
+    n = len(vertices)
+    visual_style = {
+        "vertex_size": 20,
+        "edge_color": "gray",
+        "layout": draf.layout_fruchterman_reingold(
+            maxiter=100000,
+            area=n ** 2,
+            repulserad=n ** 2)
+    }
 
-    plot(graf, **visual_style)
-    graf.simplify(multiple=True, loops=True)
-
-    communities = graf.community_edge_betweenness(directed=False)
-    clusters = communities.as_clustering()
-    print(clusters)
-
+    draf.simplify(multiple=True, loops=True)
+    clusters = draf.community_multilevel()
     pal = igraph.drawing.colors.ClusterColoringPalette(len(clusters))
-    graf.vs['color'] = pal.get_many(clusters.membership)
+    draf.vs['color'] = pal.get_many(clusters.membership)
+    igraph.plot(draf, **visual_style)
 
 
 if __name__ == '__main__':

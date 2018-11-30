@@ -32,6 +32,7 @@ def count_dates_from_messages(messages: List[Message]) -> Tuple[Dates, Frequenci
         date = message['date']
         date = fromtimestamp(date)
         dates.append(date)
+
     frequencies = Counter(dates)
 
     return list(frequencies.keys()), list(frequencies.values())
