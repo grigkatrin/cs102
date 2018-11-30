@@ -1,5 +1,6 @@
 from api import get_friends
 import time
+import igraph
 from igraph import Graph, plot
 import numpy as np
  
@@ -32,7 +33,7 @@ def plot_graph(user_id):
     edges = get_network(user_id)
     vertices = [(i['first_name']+' '+i['last_name']) for i in friends]
 
-    graf = igraph.Graph(vertex_attrs={"label": vertices}, edges=edges, directed=False)
+    graf = Graph(vertex_attrs={"label": vertices}, edges=edges, directed=False)
 
     N = len(vertices)
     visual_style = {}
@@ -41,7 +42,7 @@ def plot_graph(user_id):
         area=N ** 3,
         repulserad=N ** 3)
 
-    igraph.plot(graf, **visual_style)
+    plot(graf, **visual_style)
     graf.simplify(multiple=True, loops=True)
 
     communities = graf.community_edge_betweenness(directed=False)
