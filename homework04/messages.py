@@ -37,6 +37,7 @@ def count_dates_from_messages(messages: List[Message]) -> Tuple[Dates, Frequenci
 
     return list(frequencies.keys()), list(frequencies.values())
 
+
 def plotly_messages_freq(dates: Dates, freq: Frequencies) -> None:
     """ Построение графика с помощью Plot.ly
     :param date: список дат
@@ -44,6 +45,7 @@ def plotly_messages_freq(dates: Dates, freq: Frequencies) -> None:
     """
     data = [go.Scatter(x=dates, y=freq)]
     py.iplot(data)
+
 
 if __name__ == '__main__':
     a = messages_get_history(103854)

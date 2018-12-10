@@ -109,5 +109,6 @@ def messages_get_history(user_id, offset=0, count=200):
 
     return history
 
+
 if __name__ == '__main__':
     print(get_friends(4871626, 'bdate'))
