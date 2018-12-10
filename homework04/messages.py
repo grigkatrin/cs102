@@ -29,7 +29,7 @@ def count_dates_from_messages(messages: List[Message]) -> Tuple[Dates, Frequenci
     """
     dates = []
     for message in messages:
-        date = message['date']
+        date = message.date
         date = fromtimestamp(date)
         dates.append(date)
 
@@ -46,5 +46,8 @@ def plotly_messages_freq(dates: Dates, freq: Frequencies) -> None:
     py.iplot(data)
 
 if __name__ == '__main__':
-    a = count_dates_from_messages(messages_get_history(103854))
+    a = messages_get_history(103854)
+    for i in range(len(a)):
+        a[i]=Message(**a[i])
+    a = count_dates_from_messages(a)
     plotly_messages_freq(a[0],a[1])

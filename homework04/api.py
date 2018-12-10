@@ -84,7 +84,7 @@ def messages_get_history(user_id, offset=0, count=200):
     query = "{domain}/messages.getHistory?access_token={" \
             "access_token}&user_id={user_id}&fields={fields}&v={version}".format(
         **query_params)
-    messages = get(query)
+    messages = get(query, query_params)
     count = messages.json()['response']['count']
     history = []
 
