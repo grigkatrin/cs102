@@ -71,7 +71,7 @@ def parse_schedule(web_page, day):
     return times_list, locations_list, lessons_list
 
 
-@bot.message_handler(commands=['monday'])
+'''@bot.message_handler(commands=['monday'])
 def get_monday(message):
     """ Получить расписание на понедельник """
     _, group = message.text.split()
@@ -81,15 +81,21 @@ def get_monday(message):
     resp = ''
     for time, location, lession in zip(times_lst, locations_lst, lessons_lst):
         resp += '<b>{}</b>, {}, {}\n'.format(time, location, lession)
-    bot.send_message(message.chat.id, resp, parse_mode='HTML')
+    bot.send_message(message.chat.id, resp, parse_mode='HTML')'''
 
 
 @bot.message_handler(commands=['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'])
 def get_schedule(message):
     """ Получить расписание на указанный день """
     try:
-        day, group = message.text.split()
-        web_page = get_page(group)
+        message_info = message.text.split()
+
+        if len(message_info) == 2:
+            day, group = message_info
+            web_page = get_page(group)
+        else:
+            day, group, week = message_info
+            web_page = get_page(group, week)
 
         try:
             times_lst, locations_lst, lessons_lst = parse_schedule(web_page, day)

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95fdc88-b95d-4393-896f-f1a33a076aa9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/homework04/age.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework04/age.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework04/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework04/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework04/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework04/messages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework05/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework05/bot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +25,7 @@
     <SUITE FILE_PATH="coverage/Python$Doctests_in_vigener.coverage" NAME="Doctests in vigener Coverage Results" MODIFIED="1539722234990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
     <SUITE FILE_PATH="coverage/Python$Doctests_in_sudoku.coverage" NAME="Doctests in sudoku Coverage Results" MODIFIED="1541003043902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework02" />
     <SUITE FILE_PATH="coverage/Python$echo_bot.coverage" NAME="echo_bot Coverage Results" MODIFIED="1543932347837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework05" />
-    <SUITE FILE_PATH="coverage/Python$bot.coverage" NAME="bot Coverage Results" MODIFIED="1544460202791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework05" />
+    <SUITE FILE_PATH="coverage/Python$bot.coverage" NAME="bot Coverage Results" MODIFIED="1544463873327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework05" />
     <SUITE FILE_PATH="coverage/Python$messages.coverage" NAME="messages Coverage Results" MODIFIED="1543311758299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
     <SUITE FILE_PATH="coverage/Python$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1542441299148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework03" />
     <SUITE FILE_PATH="coverage/Python$age.coverage" NAME="age Coverage Results" MODIFIED="1543154236767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
@@ -35,7 +34,7 @@
     <session id="299040957">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="81" />
+          <entry key="project.closed" value="82" />
           <entry key="project.open.time.0" value="6" />
           <entry key="project.open.time.1" value="9" />
           <entry key="project.open.time.10" value="5" />
@@ -47,11 +46,11 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="12" />
-          <entry key="project.open.time.6" value="8" />
+          <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="11" />
           <entry key="project.open.time.8" value="11" />
           <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="82" />
+          <entry key="project.opened" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -74,13 +73,13 @@
         <counts>
           <entry key="dummy" value="38" />
           <entry key="gitignore" value="30" />
-          <entry key="py" value="18556" />
+          <entry key="py" value="18679" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="68" />
-          <entry key="Python" value="18556" />
+          <entry key="Python" value="18679" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -89,15 +88,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework05/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="127">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1544460247000" expanded="true" signature="1370:2482" ph="..." />
-                <marker date="1544460247000" expanded="true" signature="2479:2482" ph="..." />
+                <marker date="1544463884000" expanded="true" signature="1370:2482" ph="..." />
+                <marker date="1544463884000" expanded="true" signature="2479:2482" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,33 +110,6 @@
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework04/age.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework04/api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/homework04/messages.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -192,10 +164,10 @@
         <option value="$PROJECT_DIR$/homework05/echo_bot.py" />
         <option value="$PROJECT_DIR$/homework05/config.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/homework05/bot.py" />
         <option value="$PROJECT_DIR$/homework04/age.py" />
         <option value="$PROJECT_DIR$/homework04/api.py" />
         <option value="$PROJECT_DIR$/homework04/messages.py" />
+        <option value="$PROJECT_DIR$/homework05/bot.py" />
       </list>
     </option>
   </component>
@@ -233,6 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +227,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,12 +464,12 @@
     <frame x="0" y="22" width="1440" height="820" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3383405" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34334764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29395604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29395604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -645,7 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py" />
     <entry file="file://$PROJECT_DIR$/homework04/api_models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -681,18 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework05/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1544460247000" expanded="true" signature="1370:2482" ph="..." />
-            <marker date="1544460247000" expanded="true" signature="2479:2482" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework05/echo_bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -712,15 +671,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework04/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="1680">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework04/messages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="450">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework05/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1544463884000" expanded="true" signature="1370:2482" ph="..." />
+            <marker date="1544463884000" expanded="true" signature="2479:2482" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
