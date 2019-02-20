@@ -126,7 +126,7 @@ def get_near_lesson(message):
     week_day = week[n_day]
 
     try:
-        day, group = message.text.split()
+        _, group = message.text.split()
 
         web_page = get_page(group, n_week)
 
@@ -139,12 +139,13 @@ def get_near_lesson(message):
             time = time.split('-')
             start = time[0]
             start = start.split(':')
-            if len(start) == 2:
-                start_h = start[0]
-                start_m = start[1]
-                if (int(start_h) > hour) or ((int(start_m) > minutes) and (int(start_h) == hour)):
-                    resp += '<b>{}</b>, {}, {}\n'.format(time, location, lession)
-                    break
+            if len(start)<2:
+                continue
+            start_h = start[0]
+            start_m = start[1]
+            if (int(start_h) > hour) or ((int(start_m) > minutes) and (int(start_h) == hour)):
+                resp += '<b>{}</b>, {}, {}\n'.format(time, location, lession)
+                break
 
         while resp == '':
             try:
@@ -171,7 +172,7 @@ def get_near_lesson(message):
                         n_week = "2"
                     else:
                         n_week = "1"
-
+ 
     except AttributeError:
         resp = 'Введите еще раз'
 

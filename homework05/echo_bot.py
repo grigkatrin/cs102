@@ -1,5 +1,5 @@
 import telebot
-import config
+from homework05 import config
 
 access_token = config.access_token
 bot = telebot.TeleBot(access_token)

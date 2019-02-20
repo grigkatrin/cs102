@@ -1,6 +1,6 @@
 import requests
 import time
-import config
+from homework05 import config
 
 domain = config.VK_CONFIG['domain']
 access_token = config.VK_CONFIG['access_token']
