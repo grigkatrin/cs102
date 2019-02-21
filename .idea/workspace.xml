@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95fdc88-b95d-4393-896f-f1a33a076aa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HackerNews/hakernews.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam/case1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework04/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework04/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework04/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework04/messages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework05/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework05/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework05/echo_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework05/echo_bot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,27 +15,28 @@
     <SUITE FILE_PATH="coverage/Python$life.coverage" NAME="life Coverage Results" MODIFIED="1546571714677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework03" />
     <SUITE FILE_PATH="coverage/Python$1.coverage" NAME="1 Coverage Results" MODIFIED="1542441031976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework03" />
     <SUITE FILE_PATH="coverage/Python$Doctests_in_caesar.coverage" NAME="Doctests in caesar Coverage Results" MODIFIED="1539722191046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
-    <SUITE FILE_PATH="coverage/Python$Doctests_in_rsa.coverage" NAME="Doctests in rsa Coverage Results" MODIFIED="1541003053101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
     <SUITE FILE_PATH="coverage/Python$Unittests_for_test_les_TestLes.coverage" NAME="Unittests for test_les.TestLes Coverage Results" MODIFIED="1545310583891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning" />
     <SUITE FILE_PATH="coverage/Python$scraputils.coverage" NAME="scraputils Coverage Results" MODIFIED="1550573962576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HackerNews" />
-    <SUITE FILE_PATH="coverage/Python$Unittests_in_test_api_py.coverage" NAME="Unittests in test_api.py Coverage Results" MODIFIED="1543308888699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
     <SUITE FILE_PATH="coverage/Python$api.coverage" NAME="api Coverage Results" MODIFIED="1543415311600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
-    <SUITE FILE_PATH="coverage/Python$Unittests_in_test_age_py.coverage" NAME="Unittests in test_age.py Coverage Results" MODIFIED="1543308512376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
     <SUITE FILE_PATH="coverage/Python$Unittests_in_test_life_with_classes_py.coverage" NAME="Unittests in test_life_with_classes.py Coverage Results" MODIFIED="1542441280408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework03" />
     <SUITE FILE_PATH="coverage/Python$network.coverage" NAME="network Coverage Results" MODIFIED="1548497527418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/var_3" />
     <SUITE FILE_PATH="coverage/Python$cameras_template.coverage" NAME="cameras_template Coverage Results" MODIFIED="1548488878355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/var_1" />
     <SUITE FILE_PATH="coverage/Python$Unittests_for_test_neighbours_TestNeighbours.coverage" NAME="Unittests for test_neighbours.TestNeighbours Coverage Results" MODIFIED="1545475622496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam" />
     <SUITE FILE_PATH="coverage/Python$les.coverage" NAME="les Coverage Results" MODIFIED="1545479894277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam" />
-    <SUITE FILE_PATH="coverage/Python$test.coverage" NAME="test Coverage Results" MODIFIED="1548497218098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$test.coverage" NAME="test Coverage Results" MODIFIED="1550744691406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Unittests_for_test_neighbours_TestNeighbours_test_right_bottom_position.coverage" NAME="Unittests for test_neighbours.TestNeighbours.test_right_bottom_position Coverage Results" MODIFIED="1545471684887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exam" />
-    <SUITE FILE_PATH="coverage/Python$Doctests_in_vigener.coverage" NAME="Doctests in vigener Coverage Results" MODIFIED="1539722234990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
-    <SUITE FILE_PATH="coverage/Python$echo_bot.coverage" NAME="echo_bot Coverage Results" MODIFIED="1543932347837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework05" />
     <SUITE FILE_PATH="coverage/Python$bot.coverage" NAME="bot Coverage Results" MODIFIED="1544858258445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework05" />
     <SUITE FILE_PATH="coverage/Python$Doctests_in_sudoku.coverage" NAME="Doctests in sudoku Coverage Results" MODIFIED="1546570387201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework02" />
     <SUITE FILE_PATH="coverage/Python$messages.coverage" NAME="messages Coverage Results" MODIFIED="1543311758299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
-    <SUITE FILE_PATH="coverage/Python$age.coverage" NAME="age Coverage Results" MODIFIED="1543154236767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
     <SUITE FILE_PATH="coverage/Python$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1546570418749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework02" />
     <SUITE FILE_PATH="coverage/Python$hakernews.coverage" NAME="hakernews Coverage Results" MODIFIED="1550668781502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HackerNews" />
+    <SUITE FILE_PATH="coverage/Python$Doctests_in_rsa.coverage" NAME="Doctests in rsa Coverage Results" MODIFIED="1541003053101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
+    <SUITE FILE_PATH="coverage/Python$Unittests_in_test_api_py.coverage" NAME="Unittests in test_api.py Coverage Results" MODIFIED="1543308888699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
+    <SUITE FILE_PATH="coverage/Python$Unittests_in_test_age_py.coverage" NAME="Unittests in test_age.py Coverage Results" MODIFIED="1543308512376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
+    <SUITE FILE_PATH="coverage/Python$Doctests_in_vigener.coverage" NAME="Doctests in vigener Coverage Results" MODIFIED="1539722234990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework01" />
+    <SUITE FILE_PATH="coverage/Python$echo_bot.coverage" NAME="echo_bot Coverage Results" MODIFIED="1543932347837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework05" />
+    <SUITE FILE_PATH="coverage/Python$bayes.coverage" NAME="bayes Coverage Results" MODIFIED="1550761823069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HackerNews" />
+    <SUITE FILE_PATH="coverage/Python$age.coverage" NAME="age Coverage Results" MODIFIED="1543154236767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework04" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -66,7 +61,7 @@
     <session id="299040957">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="103" />
+          <entry key="project.closed" value="104" />
           <entry key="project.open.time.0" value="11" />
           <entry key="project.open.time.1" value="14" />
           <entry key="project.open.time.10" value="5" />
@@ -81,40 +76,41 @@
           <entry key="project.open.time.6" value="9" />
           <entry key="project.open.time.7" value="13" />
           <entry key="project.open.time.8" value="18" />
-          <entry key="project.open.time.9" value="10" />
-          <entry key="project.opened" value="104" />
+          <entry key="project.open.time.9" value="11" />
+          <entry key="project.opened" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Procfile" value="1" />
+          <entry key="SMSSpamCollection" value="2" />
           <entry key="gitignore" value="2" />
           <entry key="pstat" value="2" />
           <entry key="puzzle1" value="1" />
-          <entry key="py" value="127" />
+          <entry key="py" value="128" />
           <entry key="tpl" value="1" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="PLAIN_TEXT" value="15" />
           <entry key="Profiler Session" value="2" />
-          <entry key="Python" value="127" />
+          <entry key="Python" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="55" />
           <entry key="gitignore" value="30" />
-          <entry key="py" value="25033" />
+          <entry key="py" value="26447" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="87" />
-          <entry key="Python" value="25033" />
+          <entry key="Python" value="26447" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -126,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HackerNews/hakernews.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="525">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#0#66#0" expanded="true" />
                 <marker date="1550675367000" expanded="true" signature="1143:1148" ph="..." />
@@ -139,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HackerNews/news_template.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
+            <state relative-caret-position="600">
               <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
             </state>
           </provider>
@@ -148,7 +144,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HackerNews/scraputils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
+            <state relative-caret-position="690">
               <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -160,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HackerNews/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="30">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -172,8 +168,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HackerNews/bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="66">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -193,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lab_01_02.py" />
         <option value="$PROJECT_DIR$/homework01/lab_01_03.py" />
         <option value="$PROJECT_DIR$/lab_01_03.py" />
         <option value="$PROJECT_DIR$/hello_world.py" />
@@ -240,9 +247,10 @@
         <option value="$PROJECT_DIR$/HackerNews/HakerNews.py" />
         <option value="$PROJECT_DIR$/HackerNews/db.py" />
         <option value="$PROJECT_DIR$/HackerNews/scraputils.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/HackerNews/news_template.tpl" />
         <option value="$PROJECT_DIR$/HackerNews/hakernews.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/HackerNews/data/SMSSpamCollection" />
         <option value="$PROJECT_DIR$/HackerNews/bayes.py" />
       </list>
     </option>
@@ -312,11 +320,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HackerNews" />
       <recent name="$PROJECT_DIR$/homework05" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/.mypy_cache" />
       <recent name="$PROJECT_DIR$/homework04" />
-      <recent name="$PROJECT_DIR$/homework03" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hakernews">
+  <component name="RunManager" selected="Python.bayes">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -354,7 +362,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cameras_template" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -362,12 +370,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/var_1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HackerNews" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/var_1/cameras_template.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HackerNews/bayes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -467,18 +475,18 @@
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.cameras_template" />
       <item itemvalue="Python.network" />
       <item itemvalue="Python.scraputils" />
       <item itemvalue="Python.hakernews" />
+      <item itemvalue="Python.bayes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bayes" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.hakernews" />
         <item itemvalue="Python.scraputils" />
         <item itemvalue="Python.network" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.cameras_template" />
       </list>
     </recent_temporary>
   </component>
@@ -540,12 +548,12 @@
     <frame x="0" y="22" width="1440" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26251787" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26609442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44505495" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23076923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -817,23 +825,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/HackerNews/hakernews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="525">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+            <marker date="1550675367000" expanded="true" signature="1143:1148" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HackerNews/news_template.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
+        <state relative-caret-position="600">
           <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HackerNews/scraputils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
+        <state relative-caret-position="690">
           <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -843,29 +855,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HackerNews/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="30">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HackerNews/hakernews.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-            <marker date="1550675367000" expanded="true" signature="1143:1148" ph="..." />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerNews/SMSSpamCollection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-764">
+          <caret line="5503" column="4" lean-forward="true" selection-start-line="5503" selection-start-column="4" selection-end-line="5503" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HackerNews/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="66">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
