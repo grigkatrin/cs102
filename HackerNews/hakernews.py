@@ -44,7 +44,28 @@ def update_news():
 @route("/classify")
 def classify_news():
     # PUT YOUR CODE HERE
-    pass
+    classifier = NaiveBayesClassifier(1)
+    s = session()
+    labeled_news = s.query(News).filter(News.label != None).all()
+    x_train = [clean(news.title) for news in labeled_news]
+    y_train = [news.label for news in labeled_news]
+    classifier.fit(x_train, y_train)
+
+    new_news = s.query(News).filter(News.label == None).all()
+    for current in new_news:
+        [prediction] = classifier.predict([clean(current.title)])
+        if prediction == 'good':
+            current.label = 'good'
+        elif prediction == 'maybe':
+            current.label = 'maybe'
+        else:
+            current.label = 'never'
+
+
+
+def clean(s):
+    translator = str.maketrans("", "", string.punctuation)
+    return s.translate(translator).lower()
 
 
 if __name__ == "__main__":
