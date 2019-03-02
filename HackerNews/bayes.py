@@ -1,77 +1,89 @@
 from collections import Counter
+import math
 import csv
 import string
-import math
 
 
 class NaiveBayesClassifier:
 
     def __init__(self, alpha):
         self.alpha = alpha
+        self.label_prediction = {}
+        self.word_prediction = {}
 
     def fit(self, X, y):
         """ Fit Naive Bayes classifier according to X, y. """
-        working_data = []
-        all_words = []
-        self.all_labels = list(set(y))
-        self.label_list = dict.fromkeys(self.all_labels, 0)
 
+        #{'ham': 0.8669230769230769, 'spam': 0.13307692307692306}
+        labels_amount = dict(Counter(y))
+        for label in labels_amount:
+            probability = labels_amount[label]/len(y)
+            self.label_prediction.update({label: probability})
+
+        tbl = []
+        all_words = []
+        self.words_with_labels = dict.fromkeys(labels_amount, 0)
         for message, label in zip(X, y):
             words = message.split()
             for word in words:
-                working_data.append((word, label))
+                tbl.append((word, label))
                 all_words.append(word)
-                self.label_list[label] += 1
+                self.words_with_labels[label] += 1
 
-        self.word_list = Counter(working_data)
-        self.all_words = list(set(all_words))
+        self.word_label = dict(Counter(tbl))
+        words_amount = dict(Counter(all_words))
 
-        self.word_probability = dict.fromkeys(self.all_words, dict.fromkeys(self.label_list))
+        self.word_prediction.fromkeys(words_amount)
 
-        for word in self.all_words:
-            for label in self.all_labels:
-                nic = self.word_list[(word, label)]
-                nc = self.label_list[label]
-                d = len(self.all_words)
-                self.word_probability[word][label] = (nic + self.alpha)/(nc + d * self.alpha)
+        for word in words_amount:
+            current = dict.fromkeys(labels_amount)
 
-        self.label_probability = dict.fromkeys(self.all_labels)
-        message_labels = Counter(y)
-        for label in self.all_labels:
-            self.label_probability[label] = message_labels[label]/len(y)
+            for label in labels_amount:
+                nc = self.words_with_labels[label]
+                nic = self.word_label.get((word, label), 0)
+                d = len(words_amount)
+                alpha = self.alpha
+                current[label] = (nic + alpha) / (nc + alpha * d)
+
+            self.word_prediction[word] = current
 
     def predict(self, X):
         """ Perform classification on an array of test vectors X. """
         predict_list = []
-        for message in X:
-            predict_labels = []
-            words = message.split()
 
-            for label in self.label_list:
-                current = self.label_probability[label]
+        for sentence in X:
+            words = sentence.split()
+            likely_labels = []
+
+            for cur_label in self.label_prediction:
+
+                amount = self.label_prediction[cur_label]
+
+                # Calculating lnP(C)
+                total_amount = math.log(amount, math.e)
 
                 for word in words:
-                    score = self.word_probability.get(word, None)
-                    if score:
-                        current += score[label]
+                    word_dict = self.word_prediction.get(word, None)
 
-                predict_labels.append((current, label))
+                    if word_dict:
+                        # Calcuting the sum of lnP(wi|C)
+                        total_amount += math.log(word_dict[cur_label], math.e)
 
-            _, ans = max(predict_labels)
-            predict_list.append(ans)
+                likely_labels.append((total_amount, cur_label))
 
+            # Maximum value between lnP(label|D)
+            _, answer = max(likely_labels)
+            predict_list.append(answer)
         return predict_list
 
     def score(self, X_test, y_test):
         """ Returns the mean accuracy on the given test data and labels. """
-        prediction = self.predict(X_test)
         correct = 0
-        for i in range(len(y_test)):
-            if prediction[i] == y_test[i]:
+        for i, answer in enumerate(self.predict(X_test)):
+            if answer == y_test[i]:
                 correct += 1
 
         return correct/len(y_test)
-
 
 
 with open("SMSSpamCollection") as f:

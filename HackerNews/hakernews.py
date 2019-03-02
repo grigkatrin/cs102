@@ -60,7 +60,7 @@ def classify_news():
             current.label = 'maybe'
         else:
             current.label = 'never'
-
+    pass
 
 
 def clean(s):
