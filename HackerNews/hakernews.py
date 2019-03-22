@@ -1,7 +1,7 @@
 from bottle import (
     route, run, template, request, redirect
 )
-
+import string
 from scraputils import get_news
 from db import News, session
 from bayes import NaiveBayesClassifier
@@ -27,9 +27,10 @@ def add_label():
 
 @route("/update")
 def update_news():
-    news_update = get_news('https://news.ycombinator.com/newest', 3)
+    news_update = get_news('https://news.ycombinator.com/newest', 1)
     authors = []
     titles = []
+    s = session()
     for news in news_update:
         authors = authors.append(news['author'])
         titles = titles.append(news['title'])
@@ -43,24 +44,25 @@ def update_news():
 
 @route("/classify")
 def classify_news():
-    # PUT YOUR CODE HERE
-    classifier = NaiveBayesClassifier(1)
     s = session()
     labeled_news = s.query(News).filter(News.label != None).all()
     x_train = [clean(news.title) for news in labeled_news]
     y_train = [news.label for news in labeled_news]
+    classifier = NaiveBayesClassifier(1)
     classifier.fit(x_train, y_train)
 
-    new_news = s.query(News).filter(News.label == None).all()
-    for current in new_news:
-        [prediction] = classifier.predict([clean(current.title)])
+    rows = s.query(News).filter(News.label == None).all()
+    good, maybe, never = [], [], []
+    for row in rows:
+        prediction = classifier.predict([clean(row.title)])
         if prediction == 'good':
-            current.label = 'good'
+            good.append(row)
         elif prediction == 'maybe':
-            current.label = 'maybe'
+            maybe.append(row)
         else:
-            current.label = 'never'
-    pass
+            never.append(row)
+
+    return template('news_recommendations', good=good, maybe=maybe, never=never)
 
 
 def clean(s):

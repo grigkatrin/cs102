@@ -14,7 +14,6 @@ class NaiveBayesClassifier:
     def fit(self, X, y):
         """ Fit Naive Bayes classifier according to X, y. """
 
-        #{'ham': 0.8669230769230769, 'spam': 0.13307692307692306}
         labels_amount = dict(Counter(y))
         for label in labels_amount:
             probability = labels_amount[label]/len(y)
