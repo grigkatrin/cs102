@@ -4,7 +4,7 @@ import time
 
 def math_operation(x):
     res = x ** 100
-    return str(res)
+    return 'Done'
 
 
 if __name__ == '__main__':
