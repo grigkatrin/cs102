@@ -63,7 +63,7 @@ class ProcessPool:
 
     def get_info(self):
         while self.status:
-            memory_use = 0
+            memory_usege = 0
             for worker in self.workers:
                 try:
                     py = psutil.Process(worker.pid)
@@ -72,8 +72,8 @@ class ProcessPool:
                         self.memory = float(memory_use.rss / 2 ** 20)
                     print('memory use:', float(memory_use.rss) / 2 ** 20, " id:", worker.pid)
                     memory_use += float(memory_use.rss) / 2 ** 20
-                    if memory_use > self.max_memory_use:
-                        self.max_memory_use = memory_use
+                    if memory_usege > self.max_memory_use:
+                        self.max_memory_use = memory_usege
                 except Exception:
                     pass
             print("................")
